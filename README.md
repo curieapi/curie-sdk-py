@@ -1,4 +1,4 @@
-# curieai
+# Curie AI
 
 The official Python SDK for [Curie](https://curie.sh) — inference infrastructure for scientific AI.
 
