@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "curieai"
+version = "0.1.0"
+description = "The official Python SDK for Curie — inference infrastructure for scientific AI"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [{ name = "Curie", email = "hello@curie.sh" }]
+keywords = ["biology", "chemistry", "physics", "AI", "protein", "inference", "scientific"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "httpx>=0.24.0",
+    "pydantic>=2.0.0",
+    "typing-extensions>=4.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio", "respx", "black", "mypy"]
+
+[project.urls]
+Homepage = "https://curie.sh"
+Documentation = "https://curie.sh/dashboard/docs"
+Repository = "https://github.com/curie-ai/curie"
+Issues = "https://github.com/curie-ai/curie/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["curie"]
